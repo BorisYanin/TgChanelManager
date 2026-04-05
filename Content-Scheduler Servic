@@ -34,11 +34,33 @@ def save_schedule_to_db(account_id: int, settings: ScheduleSettings) -> int:
     """
     pass
 
+
+def fetch_anekdot_from_source() -> str:
+    """
+    Парсит страницу https://www.anekdot.ru/last/anekdot/
+    Извлекает текст первого (самого свежего) анекдота.
+    Возвращает строку с анекдотом.
+    При ошибке соединения или парсинга возвращает дефолтный текст:
+    "Анекдот не загрузился, но мы работаем над этим."
+    """
+    pass
+
 def schedule_background_job(schedule_id: int, cron: str, timezone: str):
     """
     Регистрирует задачу в планировщике (например, APScheduler).
     При наступлении времени будет вызвана публикация контента.
     В реальной реализации: добавляем job в планировщик с указанным cron.
+    """
+    pass
+
+
+def publish_for_account(account_id: int):
+    """
+    Основная задача планировщика для одного аккаунта:
+    1. fetch_anekdot_from_source() -> текст
+    2. get_channels_by_account(account_id) -> список каналов
+    3. Для каждого канала send_via_posting_service()
+    Логирует успехи/ошибки.
     """
     pass
 
