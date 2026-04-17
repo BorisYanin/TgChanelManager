@@ -7,23 +7,23 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 public class ChanelController {
 
-    @PostMapping("/chanel_config_schedul/{chanel_id}")
-    public ResponseEntity<?> configSchedule(@PathVariable("chanel_id") Long chanelId) {
+    @PostMapping("/chanel_config_schedul/{channel_id}")
+    public ResponseEntity<?> configSchedule(@PathVariable("channel_id") Long channelId) {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/create_chanel")
-    public ResponseEntity<?> createChanel() {
+    @PostMapping("/create_channel")
+    public ResponseEntity<?> createChannel() {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/get_chanel_inf")
-    public ResponseEntity<?> getChanelInfo() {
+    @GetMapping("/get_channel_info")
+    public ResponseEntity<?> getChannelInfo() {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/change_owner")
-    public ResponseEntity<?> changeOwner() {
+    @PostMapping("/change_owner/{channel_id}")
+    public ResponseEntity<?> changeOwner(@PathVariable("channel_id") Long channelId) {
         return ResponseEntity.ok().build();
     }
 }
