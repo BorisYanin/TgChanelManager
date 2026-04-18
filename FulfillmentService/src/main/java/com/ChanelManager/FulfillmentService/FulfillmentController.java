@@ -7,30 +7,30 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 public class FulfillmentController {
 
-  @GetMapping("/get_all_chanel")
-  public ResponseEntity<?> getAllChanels() {
+  @GetMapping("/get_all_channel")
+  public ResponseEntity<?> getAllChannels() {
     return ResponseEntity.ok().build();
   }
 
-  @GetMapping("/get_chanel/{chanel_id}")
-  public ResponseEntity<?> getChanel(@PathVariable("chanel_id") Long chanelId) {
+  @GetMapping("/get_channel/{channel_id}")
+  public ResponseEntity<?> getChannel(@PathVariable("channel_id") Long channelId) {
     return ResponseEntity.ok().build();
   }
 
-  @GetMapping("/get_chanel/filter")
-  public ResponseEntity<?> filterChanels() {
+  @PostMapping("/get_channel/filter")
+  public ResponseEntity<?> filterChannels() {
     return ResponseEntity.ok().build();
   }
 
-  @PostMapping("/book_chanel/{chanel_id}")
+  @PostMapping("/book_channel/{channel_id}")
   public ResponseEntity<?>
-  bookChanel(@PathVariable("chanel_id") Long chanelId) {
+  bookChannel(@PathVariable("channel_id") Long channelId) {
     return ResponseEntity.ok().build();
   }
 
-  @PostMapping("/change_owner/{chanel_id}")
+  @PostMapping("/change_owner/{channel_id}")
   public ResponseEntity<?>
-  changeOwner(@PathVariable("chanel_id") Long chanelId) {
+  changeOwner(@PathVariable("channel_id") Long channelId) {
     return ResponseEntity.ok().build();
   }
 }
